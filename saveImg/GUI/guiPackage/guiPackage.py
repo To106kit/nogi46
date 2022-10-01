@@ -16,9 +16,6 @@ def inputGui():
     sg.theme('BlueMono')
 
     # ウィンドウに配置するコンポーネント
-    # layout = [  [sg.Text('メンバー名をフルネームで記入してください。')],
-    #             [sg.Text('記入欄'), sg.InputText(key='-InputText-')],
-    #             [sg.Button('決定'), sg.Button('終了')] ]    # ウィンドウに配置するコンポーネント
     layout = [  [sg.Text('メンバー名を選択してください。')],
                 [sg.Text('記入欄'), sg.Combo(values=[\
                     # 4期生\
