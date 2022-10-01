@@ -6,6 +6,7 @@ r_dirName = "default"
 mydict= {
             # 4期生\
             "掛橋沙耶香":["KakehashiSayaka","https://nogiboard.blog.jp/archives/cat_169595.html"],
+            "金川紗耶":["KanagawaSaya","https://nogiboard.blog.jp/archives/cat_169594.html"],
             "佐藤璃果":["SatoRika","https://nogiboard.blog.jp/archives/cat_169603.html"],
             "田村真佑":["TamuraMayu","https://nogiboard.blog.jp/archives/cat_169599.html"],
             "筒井あやめ":["TsutsuiAyame","https://nogiboard.blog.jp/archives/cat_169600.html"],            
