@@ -6,7 +6,6 @@ from pathlib import Path
 import urllib
 import time
 import dictionary.lib as nogilib
-from guiPackage import guiPackage
 
 # セッションを開始
 session = requests.session()
