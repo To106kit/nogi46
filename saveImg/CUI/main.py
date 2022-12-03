@@ -6,6 +6,7 @@ from pathlib import Path
 import urllib
 import time
 import dictionary.lib as nogilib
+import os
 
 # セッションを開始
 session = requests.session()
@@ -43,7 +44,11 @@ for idx_url in range(0,len(t_memberName)):
     soup = BeautifulSoup(res.text, "html.parser")
 
     # 保存用フォルダを作る
-    out_folder = Path("H:\\マイドライブ\\nogi\\" + str(t_dirName[idx_url]))
+    # Windowsの場合
+    if os.name == 'nt':
+        out_folder = Path("H:\\マイドライブ\\nogi\\" + str(t_dirName[idx_url]))
+    elif os.name == 'posix':
+        out_folder = Path("/Users/to106ki/Library/CloudStorage/GoogleDrive-to106ki.hoby@gmail.com/マイドライブ/nogi" + str(t_dirName[idx_url]))
     out_folder.mkdir(exist_ok=True)
 
     for element in soup.find_all("img"):
