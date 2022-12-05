@@ -3,6 +3,10 @@
 r_memberUrl = []
 r_dirName = []
 mydict= {
+            # 3期生\
+            "久保史緒里":["KuboShiori","https://nogimaster.blog.jp/archives/cat_169318.html"],
+            "与田祐希":["YodaYuki","https://nogimaster.blog.jp/archives/cat_169592.html"],
+
             # 4期生\
             "遠藤さくら":["EndoSakura","https://nogimaster.blog.jp/archives/cat_169593.html"],
             "賀喜遥香":["KakiHaruka","https://nogimaster.blog.jp/archives/cat_169510.html"],
