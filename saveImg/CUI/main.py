@@ -7,6 +7,15 @@ import urllib
 import time
 import dictionary.lib as nogilib
 import os
+import sendgmail_pack
+import time_pack
+
+# 時間計測開始
+t_time_sta = time.time()
+
+# 初期化
+t_unit_flag = "sec"
+
 
 # セッションを開始
 session = requests.session()
@@ -19,19 +28,22 @@ login_info = {
 # メンバー選択
 # t_memberName = guiPackage.inputGui()
 t_memberName = [
-    '遠藤さくら',
-    '賀喜遥香',
-    '掛橋沙耶香',
-    '金川紗耶',
-    '佐藤璃果',
-    '田村真佑',
-    '筒井あやめ',
-    '弓木奈於',
-    '林瑠奈',
-    '一ノ瀬美空',
-    '小川彩',
-    '川崎桜',
-    '中西アルノ',]
+    '久保史緒里',
+    '与田祐希',
+    # '遠藤さくら',
+    # '賀喜遥香',
+    # '掛橋沙耶香',
+    # '金川紗耶',
+    # '佐藤璃果',
+    # '田村真佑',
+    # '筒井あやめ',
+    # '弓木奈於',
+    # '林瑠奈',
+    # '一ノ瀬美空',
+    # '小川彩',
+    # '川崎桜',
+    # '中西アルノ',
+    ]
 # メンバー毎のURLを指定
 t_dirName, t_memberUrl = nogilib.getNogiUrl(t_memberName)
 
@@ -125,3 +137,10 @@ for idx_url in range(0,len(t_memberName)):
 
     print("####### End save image !! #######")
     # %%
+# 時間計測終了
+t_time_end = time.time()
+# 経過時間（min）
+t_time, t_unit_flag = time_pack.calc_exec_time_mod.calc_exec_time_fnc(t_time_sta, t_time_end)
+
+# gmailへ実行完了メールを送信
+sendgmail_pack.sendgmail_mod.sendgmail(t_time, t_unit_flag)
